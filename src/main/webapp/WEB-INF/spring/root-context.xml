@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-3.1.xsd ">
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- Oracle 전용 -->
+	<!-- 데이터베이스 연결 --> 
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
+		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />  <!-- 1521 뒤에는 사용자명 입력 -->
+		<property name="username" value="fm"/> 
+		<property name="password" value="oracle"/> 
+	</bean>
+	
+	<!-- SqlSessionFactory (파일 없으면 404 에러 뜸) -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations" value="classpath:/mapper/*-sql.xml" /> <!-- * 없으면 붙여주고, 경로 및 파일명 잘 확인하기 -->
+	</bean>
+	
+	<!-- SqlSessionTemplate DB연결 & 종료 -->
+	<bean id="SqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+</beans>
