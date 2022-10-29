@@ -1,4 +1,4 @@
-package com.ucamp.fm.controller;
+package com.ucamp.fm.test;
 
 import java.sql.*;
 
