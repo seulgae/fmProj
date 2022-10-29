@@ -1,12 +1,9 @@
-package com.ucamp.fm.controller;
+package com.ucamp.fm.dao;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Repository;
 
-@Controller
-@RequestMapping("/login")
-public class LoginController {
-	
+@Repository
+public class MemberDaoImpl implements MemberDao{
 //    @Autowired
 //    DataSource ds;
 //
@@ -126,6 +123,4 @@ public class LoginController {
 //            pstmt.executeUpdate();
 //        }
 //    }
-
-	
 }
