@@ -19,6 +19,7 @@
 			<id>Spring Plugins</id>
 			<url>http://nexus.saas.hand-china.com/content/repositories/rdc/</url>
 		</repository>
+		<!-- ojdbc를 다운받기 위해 추가함. -->
 		<repository>
 			<id>oracle</id>
 			<name>ORACLE JDBC Repository</name>
@@ -150,9 +151,12 @@
 		<!-- 오라클 JDBC 드라이버 -->
 		<!-- respositories에 url 같이 첨부해야 에러 안 남 -->
 		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc7</artifactId>
-			<version>12.1.0.2</version>
+		    <groupId>oracle</groupId>
+		    <artifactId>ojdbc8</artifactId>
+		    <version>12.2.0.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/ojdbc8.jar</systemPath>
+		    <!-- lib 폴더에 path 경로 설정 -->
 		</dependency>
 
 		<!-- MyBatis -->
@@ -207,6 +211,11 @@
 					<mainClass>org.test.int1.Main</mainClass>
 				</configuration>
 			</plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
 		</plugins>
 	</build>
 </project>
