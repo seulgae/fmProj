@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<body>
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -46,7 +45,7 @@
                      <div class="col-md-10 offset-md-1">
                         
                         <p>
-                        © 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a>
+                        © 2019 All Rights Reserved. Design by <a href="https://html.design/"> ucamp 36</a>
                         <br><br>
                         Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
                         </p>
@@ -59,4 +58,12 @@
       </footer>
       <!-- end footer -->
 </body>
+      <!-- Javascript files-->
+      <script src="<c:url value='/js/jquery.min.js'/>"></script>
+      <script src="<c:url value='/js/bootstrap.bundle.min.js'/>"></script>
+      <script src="<c:url value='/js/jquery-3.0.0.min.js'/>"></script>
+      <!-- sidebar -->
+      <script src="<c:url value='/js/jquery.mCustomScrollbar.concat.min.js'/>"></script>
+      <script src="<c:url value='/js/custom.js'/>"></script>
+   </body>
 </html>
