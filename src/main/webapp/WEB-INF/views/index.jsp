@@ -5,7 +5,7 @@
 <c:import url="include/header.jsp" charEncoding="UTF-8" />
 
       <!-- banner -->
-      <section class="banner_main">
+      <section class="banner_main" style="margin: 20px auto">
          <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -14,15 +14,15 @@
             </ol>
             <div class="carousel-inner">
                <div class="carousel-item active">
-                  <img class="first-slide" src="images/banner1.jpg" alt="First slide">
+                  <img class="first-slide" src="images/banner1.jpg" alt="First slide" style="width: 1000px; height:500px">
                   <div class="container">
                   </div>
                </div>
                <div class="carousel-item">
-                  <img class="second-slide" src="images/banner2.jpg" alt="Second slide">
+                  <img class="second-slide" src="images/banner2.jpg" alt="Second slide" style="width: 1000px; height:500px">
                </div>
                <div class="carousel-item">
-                  <img class="third-slide" src="images/banner3.jpg" alt="Third slide">
+                  <img class="third-slide" src="images/banner3.jpg" alt="Third slide" style="width: 1000px; height:500px">
                </div>
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

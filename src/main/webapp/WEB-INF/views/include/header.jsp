@@ -73,7 +73,7 @@
                                  <a class="nav-link" href="gallery.html">Q&A 게시판</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="blog.html">회원가입</a>
+                                 <a class="nav-link" href="<c:url value='/login/member'/>">회원가입</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="<c:url value='/login/login'/>"> 로그인</a>
