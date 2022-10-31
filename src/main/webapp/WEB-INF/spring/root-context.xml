@@ -19,14 +19,14 @@
 	</bean>
 	
 	<!-- * 없으면 붙여주고, 경로 및 파일명 잘 확인하기 -->
-	<!-- SqlSessionFactory (파일 없으면 404 에러 뜸)
+	<!-- SqlSessionFactory (파일 없으면 404 에러 뜸)-->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="mapperLocations" value="classpath:/mapper/*-sql.xml" />
-	</bean>-->
+        <property name="mapperLocations" value="classpath:/mapper/*Mapper.xml" />
+	</bean>
 	
-	<!-- SqlSessionTemplate DB연결 & 종료 
+	<!-- SqlSessionTemplate DB연결 & 종료-->
 	<bean id="SqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory" />
-	</bean> -->
+	</bean>
 </beans>
