@@ -77,7 +77,7 @@
                                  <a class="nav-link" href="blog.html">회원가입</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">로그인</a>
+                                 <a class="nav-link" href="<c:url value='login/login'/>"> 로그인</a>
                               </li>
                            </ul>
                         </div>
@@ -88,3 +88,12 @@
          </div>
       </header>
       <!-- end header inner -->
+      <!-- Javascript files-->
+      <script src="<c:url value='js/jquery.min.js'/>"></script>
+      <script src="<c:url value='js/bootstrap.bundle.min.js'/>"></script>
+      <script src="<c:url value='js/jquery-3.0.0.min.js'/>"></script>
+      <!-- sidebar -->
+      <script src="<c:url value='js/jquery.mCustomScrollbar.concat.min.js'/>"></script>
+      <script src="<c:url value='js/custom.js'/>"></script>
+   </body>
+</html>
