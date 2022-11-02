@@ -15,14 +15,18 @@ public class LoginController {
 	@Autowired
 	MemberDao memberDao;
 	
-	@PostMapping("/login")
+	@GetMapping("/login")
     public String login() {
         return "login";
     }
     
-    @PostMapping("/member")
+    @GetMapping("/member")
     public String loginForm() {
         return "member";
     }
     
+    @GetMapping("/mypage")
+    public String mypage() {
+        return "mypage";
+    }
 }

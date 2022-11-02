@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false"%>
+<%-- <c:set var="loginId" value="${pageContext.request.getSession(false)==null ? '' : pageContext.request.session.getAttribute('id')}"/> --%>
+<c:set var="loginOutLink" value="${loginId=='' ? '/login/login' : '/login/logout'}"/>
+<c:set var="loginOut" value="${loginId=='' ? '로그인' : '로그아웃'}"/>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -48,7 +52,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src=<c:url value='/images/logo.png'/> alt="#" style="width: 200px; height: 80px;" /></a>
+                              <a href="/"><img src=<c:url value='/images/logo.png'/> alt="#" style="width: 200px; height: 80px;" /></a>
                            </div>
                         </div>
                      </div>
@@ -76,7 +80,7 @@
                                  <a class="nav-link" href="<c:url value='/login/member'/>">회원가입</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="<c:url value='/login/login'/>"> 로그인</a>
+                                 <a class="nav-link" href="<c:url value='${loginOutLink}'/>">${loginOut}</a>
                               </li>
                            </ul>
                         </div>

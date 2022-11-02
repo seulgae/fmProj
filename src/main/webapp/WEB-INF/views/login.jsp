@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="<c:url value='/css/login.css'/>">
 <!-- 로그인시작 -->
 <div id="signin">
-	<form id="loginFrm" name="loginFrm" method="post">
+	<form id="loginFrm" name="loginFrm" method="get">
 		<table>
 			<tbody>
 				<tr>
