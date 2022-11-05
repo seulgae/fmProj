@@ -20,9 +20,14 @@ public class LoginController {
         return "login";
     }
     
-    @GetMapping("/member")
+	@GetMapping("/member")
     public String loginForm() {
         return "member";
+    }
+	
+	@GetMapping("/memberMod")
+    public String loginUpdateForm() {
+        return "member_Mod";
     }
     
     @GetMapping("/mypage")

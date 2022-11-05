@@ -8,7 +8,7 @@
 
         <!-- 회원가입시작 -->
 		<div id="signup">
-    		<form name="regFrm" id="regFrm" method="post">
+    		<form name="regFrm" id="regFrm" method="get">
         		<table>
             		<tbody>
 	            		<tr>

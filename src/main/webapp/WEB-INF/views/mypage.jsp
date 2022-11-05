@@ -34,12 +34,11 @@
                         <button>구장 수정</button>
                         <button>구장 삭제</button>
                         <button>예약 현황</button>
-                        <button>내 정보 수정</button>
+                        <button type="button" onclick="location.href='<c:url value='/login/memberMod'/>' ">내 정보 수정</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-
         <table id="managerList">
             <thead>
                 <tr>
