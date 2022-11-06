@@ -315,15 +315,66 @@ button {
      background-color: #fe0000;
 }
 
+/* 구장 예약 css */
 .booking_ocline {
      position: absolute;
      width: 100%;
-     top: 50%;
-     transform: translateY(-50%);
+	 top: 23%;
+     transform: translateX(-10%);
 }
+
+/* 예약 리스트 출력 */
+.booking_ocline2{
+	position: absolute;
+	width:50%;
+	height:500px;
+	left: 45%;
+	top: 15%;
+	background-color: #fff;
+	opacity: 0.8; /* 투명도  */
+}
+
+.serach{
+	display: inline-block;
+	text-align: right;
+}
+
+.sideList_title {
+	font-size: 30px;
+	margin: 10px 270px 20px 20px;
+}
+
+table#sideList{
+    width: 100%;
+    margin: 20px auto;
+}
+
+table#sideList{
+    height: 30px;
+    border-collapse: separate;
+	border-spacing: 0 10px;
+}
+
+table#sideList tr>th{
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+table#sideList tr>td{
+    text-align: center;
+    border: 1px solid #f8f8f8;
+}
+
+/* 예약 리스트 출력 끝*/
 
 .book_room {
      background-color: #000000c7;
+     padding: 30px 35px;
+     border-left: #ff0909 solid 5px;
+}
+
+.book_room2 {
+     background-color: #d8d8d8;
      padding: 30px 35px;
      border-left: #ff0909 solid 5px;
 }
@@ -757,7 +808,7 @@ button {
 
 .footer {
      background: #0f1521;
-     margin-top: 90px;
+     margin-top: -20px;
      padding-top: 60px;
      text-align: center;
 }

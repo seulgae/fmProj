@@ -5,7 +5,7 @@
 <c:import url="include/header.jsp" charEncoding="UTF-8" />
 
       <!-- banner -->
-      <section class="banner_main">
+      <section class="banner_main" style="margin: 20px auto">
          <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -14,15 +14,15 @@
             </ol>
             <div class="carousel-inner">
                <div class="carousel-item active">
-                  <img class="first-slide" src="images/banner1.jpg" alt="First slide">
+                  <img class="first-slide" src="images/banner1.jpg" alt="First slide" style="width: 100%; height:700px">
                   <div class="container">
                   </div>
                </div>
                <div class="carousel-item">
-                  <img class="second-slide" src="images/banner2.jpg" alt="Second slide">
+                  <img class="second-slide" src="images/banner2.jpg" alt="Second slide" style="width: 100%; height:700px">
                </div>
                <div class="carousel-item">
-                  <img class="third-slide" src="images/banner3.jpg" alt="Third slide">
+                  <img class="third-slide" src="images/banner3.jpg" alt="Third slide" style="width: 100%; height:700px">
                </div>
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -61,6 +61,34 @@
                   </div>
                </div>
             </div>
+         </div>
+         <div class="booking_ocline2">
+         	<br>
+         	<span class="sideList_title">예약 가능한 구장 리스트</span>
+         	<form class="serach">
+         		<input type="text" placeholder="검색해주세요." name="serach">
+         		<input type="submit" name="serach" value="검색">
+         	</form>
+	        <table id="sideList">
+	            <thead>
+	                <tr>
+	                    <th>번호</th>
+	                    <th>제목</th>
+	                    <th>날짜</th>
+	                    <th>작성자</th>
+	                    <th>조회수</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+		            <tr>
+		                <td>1</td>
+		                <td>하지석리 축구구장</td>
+		                <td>2022-11-18</td>
+		                <td>길태형</td>
+		                <td>12</td>
+		            <tr>
+	            </tbody>
+	        </table>
          </div>
       </section>
       <!-- end banner -->

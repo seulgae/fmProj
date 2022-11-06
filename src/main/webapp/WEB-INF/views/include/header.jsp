@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false"%>
+<%-- <c:set var="loginId" value="${pageContext.request.getSession(false)==null ? '' : pageContext.request.session.getAttribute('id')}"/> --%>
+<%-- <c:set var="loginOutLink" value="${loginId=='' ? '/login/login' : '/login/logout'}"/> --%>
+<%-- <c:set var="loginOut" value="${loginId=='' ? '로그인' : '로그아웃'}"/> --%>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -27,9 +31,7 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -48,7 +50,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src=<c:url value='/images/logo.png'/> alt="#" style="width: 200px; height: 80px;" /></a>
+                              <a href="/"><img src=<c:url value='/images/logo.png'/> alt="#" style="width: 200px; height: 80px;" /></a>
                            </div>
                         </div>
                      </div>
@@ -67,16 +69,17 @@
                                  <a class="nav-link" href="about.html">About</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="room.html">팀 관리 게시판</a>
+                                 <a class="nav-link" href="<c:url value='/teammanage/teammanage'/>">팀 관리 게시판</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="gallery.html">Q&A 게시판</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="blog.html">회원가입</a>
+                                 <a class="nav-link" href="<c:url value='/login/member'/>">회원가입</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="<c:url value='/login/login'/>"> 로그인</a>
+                                 <%-- <a class="nav-link" href="<c:url value='${loginOutLink}'/>">${loginOut}</a> --%>
+                                 <a class="nav-link" href="<c:url value='/login/login'/>">로그인</a>
                               </li>
                            </ul>
                         </div>
