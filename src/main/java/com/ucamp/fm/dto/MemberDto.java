@@ -1,4 +1,4 @@
-package com.ucamp.fm.domain;
+package com.ucamp.fm.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
