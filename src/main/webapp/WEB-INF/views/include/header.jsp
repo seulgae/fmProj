@@ -36,10 +36,12 @@
    <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="<c:url value='/images/loading.gif'/>" alt="#"/></div>
-      </div>
-      <!-- end loader -->
+<%-- 	<div class="loader_bg">
+		<div class="loader">
+			<img src="<c:url value='/images/loading.gif'/>" alt="#" />
+		</div>
+	</div> --%>
+	<!-- end loader -->
       <!-- header -->
       <header>
          <!-- header inner -->
@@ -72,7 +74,7 @@
                                  <a class="nav-link" href="<c:url value='/teammanage/teammanage'/>">팀 관리 게시판</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="gallery.html">Q&A 게시판</a>
+                                 <a class="nav-link" href="<c:url value='/qna/qna'/>">Q&A 게시판</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="<c:url value='/login/member'/>">회원가입</a>
